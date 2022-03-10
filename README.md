@@ -4,8 +4,8 @@ AP CSP T3 P4
 
 Pages:
 
-| [REPLIT](https://replit.com/@Michaelc179/sleep#README.md) | [GH PAGES](https://michaelc179.github.io/sleep/) | 
-| - | - |
+- [REPLIT](https://replit.com/@Michaelc179/sleep#README.md)
+- [GH PAGES](https://michaelc179.github.io/sleep/)
 
 Ideas:
 
