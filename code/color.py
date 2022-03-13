@@ -10,6 +10,7 @@ white = "\033[37m"
 nc = "\n"
 
 # COLOR TESTING
-print(red + "test")
-print(blue + "test2")
-print(green + "test3" + "\n" + cyan + "test4")
+def test():
+  print(red + "test")
+  print(blue + "test2")
+  print(green + "test3" + "\n" + cyan + "test4")
