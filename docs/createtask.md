@@ -1,3 +1,5 @@
+{% include navigation.html %}
+
 # Michael Create Task
 
 [Runtime](https://nastyawakened.cf/michael/)
