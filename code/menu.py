@@ -25,7 +25,8 @@ main_menu = [
 # Submenu list of [Prompt, Action]
 # Works similarly to main_menu
 sub_menu = [
-    ["2 Prop Z-Test", stats.two_propzt]
+    ["2 Prop Z-Test", stats.two_propzt],
+    ["1 Prop Z-Test", stats.one_propzt]
 ]
 
 # Menu banner is typically defined by menu owner
