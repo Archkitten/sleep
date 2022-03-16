@@ -10,7 +10,7 @@ import fib
 import tennis
 import color
 import stats
-
+import tpt.tpt1
 
 # Main list of [Prompts, Actions]
 # Two styles are supported to execute abstracted logic
@@ -24,10 +24,15 @@ main_menu = [
 
 # Submenu list of [Prompt, Action]
 # Works similarly to main_menu
-sub_menu = [
+stats_sub_menu = [
     ["2 Prop Z-Test", stats.two_propzt],
     ["1 Prop Z-Test", stats.one_propzt]
 ]
+
+tpt_sub_menu = [
+    ["TPT 1", tpt.tpt1.tester]
+]
+
 
 # Menu banner is typically defined by menu owner
 magenta = "\033[35m"
@@ -50,19 +55,20 @@ banner = f"\n{border}\nPlease Select An Option zZ\n{border}"
 def menu():
     title = magenta + sleep + white + banner
     menu_list = main_menu.copy()
-    menu_list.append(["Statistics", submenu])
-    # menu_list.append(["Patterns", patterns_submenu])
+    menu_list.append(["Statistics", stats_submenu])
+    menu_list.append(["TPT", tpt_submenu])
     buildMenu(title, menu_list)
 
 # def submenu
 # using sub menu list above:
 # sub_menu works similarly to menu()
-def submenu():
+def stats_submenu():
     title = "Function Submenu" + banner
-    buildMenu(title, sub_menu)
-def patterns_submenu():
+    buildMenu(title, stats_sub_menu)
+
+def tpt_submenu():
     title = "Function Submenu" + banner
-    buildMenu(title, patterns_sub_menu)
+    buildMenu(title, tpt_sub_menu)
 
 def buildMenu(banner, options):
     # header for menu
@@ -90,7 +96,7 @@ def buildMenu(banner, options):
             return
         try:
             # try as function
-            os.system('clear') 
+            os.system('cls') 
             action = prompts.get(choice)[1]
             action()
         except TypeError:
