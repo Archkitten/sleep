@@ -2,7 +2,7 @@
 
 {% include_relative README.md %}
 
-{% include review.md %}
+{% include_relative docs/review.md %}
 
 {% include replit.html %}
 
