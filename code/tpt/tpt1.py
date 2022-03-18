@@ -1,5 +1,8 @@
 # Hack 1: InfoDB lists.  Build your own/personalized InfoDb with a list length > 3,  create list within a list as illustrated with Owns_Cars
 
+blue = "\033[34m"
+white = "\033[37m"
+
 InfoDb = []
 # List with dictionary records placed in a list  
 InfoDb.append({  
@@ -60,43 +63,37 @@ def recursive_loop(x):
         print_data(x)
         recursive_loop(x + 1)
 
-def fibonacci(x,y,comp1,comp2):
-    if x > y:
-        total1 = comp1 + comp2 # total
-        comp1 = comp2 # re-arrange variables
-        comp2 = total1 # total
-        fibonacci(x+1,y+1,comp1,comp2)
-    print(total1)    
-        
-        # fibonacci(x+1)
-        # return total1
-
 # hack 3: fibonnaci
 
-def fibonnaci(n):
+def fibonacci(n):
     if n == 0:
-        return 0
+      return 0
     elif n == 1:
-        return 1
-    else:
-        return fibonnaci(n-1) + fibonnaci(n-2)
+      return 1
+    else: 
+      return fibonacci(n-1) + fibonacci(n-2)
 
 def tester2():
-    num = int(input("Term of Fibonacci Sequence: "))
-    # check if the number is negative
-    if num < 0:
-        print("You tested negative for COVID-19! Unfortunately, we only accept postive values at this Wendy's")
-    else:
-        print("Term", num, "in the Fibonnaci Sequence is", fibonnaci(num))
+    try:
+      num = int(input("Term of Fibonacci Sequence: "))
+      # check if the number is negative
+      if num < 0:
+          print("You tested negative for COVID-19! Unfortunately, we only accept postive values at this Wendy's")
+      else:
+          print(num, "terms of the Fibonacci Sequence:")
+          for i in range(num):
+            print(fibonacci(i))
+    except:
+      print("INTEGER INTEGER INTEGER WHAT ARE YOU EVEN DOING")
 
 # tester2()
 
 def tester():
-    print("For loop")
+    print(blue + "For loop" + white)
     for_loop()
-    print("While loop")
+    print(blue + "While loop" + white)
     while_loop(0)  # requires initial index to start while
-    print("Recursive loop")
+    print(blue + "Recursive loop" + white)
     recursive_loop(0)  # requires initial index to start recursion
     tester2()
     exit()

@@ -6,10 +6,7 @@
 import os
 
 # file imports
-import fib
-import tennis
-import color
-import stats
+import fib, swap, matrix, tree, tennis, color, stats
 import tpt.tpt1
 
 # Main list of [Prompts, Actions]
@@ -18,8 +15,9 @@ import tpt.tpt1
 # 2. function references will be executed directly file.function()
 main_menu = [
     ["Tennis", tennis.tennis],
-    ["Color", color.test],
-    ["Fibonacci", fib.fibonacci]
+    ["Swap", swap.swap],
+    ["Matrices", matrix.in_the_matrix],
+    ["Christmas Tree", tree.not_christmas_time],
 ]
 
 # Submenu list of [Prompt, Action]
@@ -31,6 +29,11 @@ stats_sub_menu = [
 
 tpt_sub_menu = [
     ["TPT 1", tpt.tpt1.tester]
+]
+
+random_sub_menu = [
+    ["Color", color.test],
+    ["Fibonacci", fib.fibonacci],
 ]
 
 
@@ -57,18 +60,23 @@ def menu():
     menu_list = main_menu.copy()
     menu_list.append(["Statistics", stats_submenu])
     menu_list.append(["TPT", tpt_submenu])
+    menu_list.append(["Random", random_submenu])
     buildMenu(title, menu_list)
 
 # def submenu
 # using sub menu list above:
 # sub_menu works similarly to menu()
 def stats_submenu():
-    title = "Function Submenu" + banner
+    title = "Statistics Submenu" + banner
     buildMenu(title, stats_sub_menu)
 
 def tpt_submenu():
-    title = "Function Submenu" + banner
+    title = "TPT Submenu" + banner
     buildMenu(title, tpt_sub_menu)
+
+def random_submenu():
+    title = "Random Function Submenu" + banner
+    buildMenu(title, random_sub_menu)
 
 def buildMenu(banner, options):
     # header for menu
@@ -96,7 +104,10 @@ def buildMenu(banner, options):
             return
         try:
             # try as function
-            os.system('cls') 
+            try:
+              os.system('clear')
+            except:
+              os.system('cls')
             action = prompts.get(choice)[1]
             action()
         except TypeError:

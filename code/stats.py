@@ -1,6 +1,7 @@
 import math
 import numpy as np # math stuff
 from scipy.integrate import quad # integration
+import os
 
 # colors
 
@@ -37,7 +38,8 @@ def alpha(a,pval):
 
 def two_propzt():
   # getting statistical values
-  print("2 sample z-test for p1-p2")
+  test = "2 sample z-test for difference in proportions"
+  print(test)
   x1 = int(input("Successes x1: "))
   x2 = int(input("Successes x2: "))
   n1 = int(input("Pop. size n1: ")) 
@@ -62,10 +64,13 @@ def two_propzt():
   pval = ztpval(p,Ha)
   
   # just testing
+  os.system('clear')
+  print(test)
   print("props:", round(p1, 4), round(p2, 4), round(pc, 4))
   print("SD:", round(sd, 4))
   print("z-score:", round(z,4))
-  print("p result:", round(p, 4)) # testing purposes
+  # print("p result:", round(p, 4)) # testing purposes
+  print("alpha value:", a)
   print("p-value:", round(pval,8))
   alpha(a,pval) 
   
@@ -74,8 +79,9 @@ def two_propzt():
 # two_propzt()
 
 def one_propzt():
-  print("1 sample z-test for p-hat")
+  test = "1 sample z-test for proportion p"
   # parameters
+  print(test)
   p0 = float(input("P0: "))
   x = int(input("Successes x: "))
   n = int(input("Pop. size n: "))
@@ -84,7 +90,7 @@ def one_propzt():
   a = float(input("Significance Level α: "))
 
   # proportion values
-  p = float(x/n) # p hat 1
+  p = float(x/n) # p hat
 
   # calculations
   sd = math.sqrt(p0*(1-p0)*(1/n))
@@ -93,6 +99,8 @@ def one_propzt():
   result = quad(zform, -math.inf, z)[0]
   pval = ztpval(result,Ha)
 
+  os.system('clear')
+  print(test)
   print("props:", p0, p)
   print("SD:", round(sd, 4))
   print("z-score:", round(z,4))
@@ -102,3 +110,25 @@ def one_propzt():
   exit()
 
 # one_propzt()
+
+# def ttest():
+#   test = "1 sample t-test for µ"
+#   print(test)
+#   # parameter values
+#   m = int(input("µ: "))
+#   n = int(input("n: "))
+
+#   # calculations
+#   sd = # whatever this is
+#   t = # the formula
+
+#   pval = # formula #2
+
+#   os.system('clear')
+#   print(test)
+#   print("mean:", m)
+#   print("population size:", n)
+#   print("SD:", round(sd, 4))
+#   print("t:", round(t, 4))
+#   print("p-value:", round(pval, 4))
+  
