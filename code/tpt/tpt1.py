@@ -67,24 +67,24 @@ def recursive_loop(x):
 
 def fibonacci(n):
     if n == 0:
-      return 0
+      return 0 # for 0
     elif n == 1:
-      return 1
+      return 1 # for 1
     else: 
-      return fibonacci(n-1) + fibonacci(n-2)
+      return fibonacci(n-1) + fibonacci(n-2) # recursion
 
 def tester2():
     try:
-      num = int(input("Term of Fibonacci Sequence: "))
+      num = int(input("Term of Fibonacci Sequence: ")) # user input
       # check if the number is negative
       if num < 0:
-          print("You tested negative for COVID-19! Unfortunately, we only accept postive values at this Wendy's")
+          print("You tested negative for COVID-19! Unfortunately, we only accept postive values at this Wendy's") # negative input
       else:
           print(num, "terms of the Fibonacci Sequence:")
           for i in range(num):
-            print(fibonacci(i))
+            print(fibonacci(i)) # list 0-n
     except:
-      print("INTEGER INTEGER INTEGER WHAT ARE YOU EVEN DOING")
+      print("INTEGER INTEGER INTEGER WHAT ARE YOU EVEN DOING") # non-integer input
 
 # tester2()
 
@@ -95,7 +95,7 @@ def tester():
     while_loop(0)  # requires initial index to start while
     print(blue + "Recursive loop" + white)
     recursive_loop(0)  # requires initial index to start recursion
-    tester2()
+    # tester2()
     exit()
     # hack3()
 

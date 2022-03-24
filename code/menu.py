@@ -14,10 +14,6 @@ import tpt.tpt1
 # 1. file names will be run by exec(open("filename.py").read())
 # 2. function references will be executed directly file.function()
 main_menu = [
-    ["Tennis", tennis.tennis],
-    ["Swap", swap.swap],
-    ["Matrices", matrix.in_the_matrix],
-    ["Christmas Tree", tree.not_christmas_time],
 ]
 
 # Submenu list of [Prompt, Action]
@@ -27,8 +23,19 @@ stats_sub_menu = [
     ["1 Prop Z-Test", stats.one_propzt]
 ]
 
-tpt_sub_menu = [
-    ["TPT 1", tpt.tpt1.tester]
+pattern_sub_menu = [
+    ["Tennis", tennis.tennis],
+    ["Christmas Tree", tree.not_christmas_time],
+]
+
+math_sub_menu = [
+    ["Matrices", matrix.in_the_matrix],
+    ["TPT 1 - Fibo", tpt.tpt1.tester2]
+]
+
+data_sub_menu = [
+    ["Swap", swap.swap],  
+    ["TPT 1 - InfoDB", tpt.tpt1.tester]
 ]
 
 random_sub_menu = [
@@ -59,7 +66,9 @@ def menu():
     title = magenta + sleep + white + banner
     menu_list = main_menu.copy()
     menu_list.append(["Statistics", stats_submenu])
-    menu_list.append(["TPT", tpt_submenu])
+    menu_list.append(["Pattern", pattern_submenu])
+    menu_list.append(["Math", math_submenu])
+    menu_list.append(["Data", data_submenu])
     menu_list.append(["Random", random_submenu])
     buildMenu(title, menu_list)
 
@@ -70,9 +79,17 @@ def stats_submenu():
     title = "Statistics Submenu" + banner
     buildMenu(title, stats_sub_menu)
 
-def tpt_submenu():
-    title = "TPT Submenu" + banner
-    buildMenu(title, tpt_sub_menu)
+def pattern_submenu():
+    title = "Pattern submenu" + banner
+    buildMenu(title, pattern_sub_menu)
+
+def math_submenu():
+    title = "Math submenu" + banner
+    buildMenu(title, math_sub_menu)
+
+def data_submenu():
+    title = "Data submenu" + banner
+    buildMenu(title, data_sub_menu)
 
 def random_submenu():
     title = "Random Function Submenu" + banner

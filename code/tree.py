@@ -4,7 +4,7 @@ def not_christmas_time():
     for n in range(treeSize-i):
       print(" ", end="")
     for p in range(int(2*i)+1):
-      print("*", end="")
+      print("^", end="")
     print()
   for i in range(int(treeSize/4)):
     for t in range(treeSize-int(treeSize/5)): 
