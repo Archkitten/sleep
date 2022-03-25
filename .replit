@@ -1,2 +1,2 @@
 language = "bash"
-run = "python3 code/tpt/tpt2.py"
+run = "python3 code/menu.py"

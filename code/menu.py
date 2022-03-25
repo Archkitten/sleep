@@ -7,7 +7,7 @@ import os
 
 # file imports
 import fib, swap, matrix, tree, tennis, color, stats
-import tpt.tpt1
+import tpt.tpt1, tpt.tpt2
 
 # Main list of [Prompts, Actions]
 # Two styles are supported to execute abstracted logic
@@ -30,7 +30,9 @@ pattern_sub_menu = [
 
 math_sub_menu = [
     ["Matrices", matrix.in_the_matrix],
-    ["TPT 1 - Fibo", tpt.tpt1.tester2]
+    ["TPT 1 - Fibo", tpt.tpt1.tester2],
+    ["TPT 2 - Factorial", tpt.tpt2.factorial],
+    ["TPT 2 - Find Factors", tpt.tpt2.factorfinder]
 ]
 
 data_sub_menu = [
