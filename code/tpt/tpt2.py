@@ -1,6 +1,6 @@
 # Function to find the Factors of a Number
 
-class findFactors:
+class FindFactors:
   def __init__(self):
     print("1", end=" ")
   def __call__(self, n):
@@ -12,7 +12,7 @@ class findFactors:
 def factorfinder():
   print("Factor Finder")
   num = int(input("Enter any Number to Find its Factors: "))
-  factors = findFactors()
+  factors = FindFactors()
   factors(num)
 
 class Factorial:

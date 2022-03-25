@@ -82,7 +82,8 @@ def tester2():
       else:
           print(num, "terms of the Fibonacci Sequence:")
           for i in range(num):
-            print(fibonacci(i)) # list 0-n
+            print(fibonacci(i), end=" ")# list 0-n
+          print()
     except:
       print("INTEGER INTEGER INTEGER WHAT ARE YOU EVEN DOING") # non-integer input
 
