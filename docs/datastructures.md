@@ -1,3 +1,29 @@
+# Data Structures Project
+
+## TPT 1
+
+### Loops:
+
+```python
+def for_loop():
+    for x in range(len(InfoDb)):
+        # print(InfoDb[x])
+        print_data(x)
+
+def while_loop(x):
+    while x < len(InfoDb):
+        # print(InfoDb[x])
+        print_data(x)
+        x += 1
+
+
+def recursive_loop(x):
+    if x < len(InfoDb):
+        # print(InfoDb[x])
+        print_data(x)
+        recursive_loop(x + 1)
+```
+
 ## TPT 2
 
 ### Factor Finder Function:
