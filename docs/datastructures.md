@@ -1,5 +1,7 @@
 # Data Structures Project
 
+{% include replit.html %}
+
 ## TPT 1
 
 ### Loops:
