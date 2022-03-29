@@ -97,7 +97,7 @@ def tester():
     print(blue + "Recursive loop" + white)
     recursive_loop(0)  # requires initial index to start recursion
     # tester2()
-    exit()
+    # exit()
     # hack3()
 
 # tester()
