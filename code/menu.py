@@ -124,9 +124,11 @@ def buildMenu(banner, options):
         try:
             # try as function
             try:
-              os.system('clear')
+                os.system('clear')
             except:
-              os.system('cls')
+                os.system('cls')
+                # How to fix 'TERM environment variable not set.' in IntelliJ:
+                # https://softwaretester.info/pycharm-term-environment-variable-not-set/
             action = prompts.get(choice)[1]
             action()
         except TypeError:
