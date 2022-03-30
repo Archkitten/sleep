@@ -109,8 +109,7 @@ section img {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #990099;
-  // color: $header;
+  color: $header;
   letter-spacing: -0.03em;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
   0 0 5px rgba(181, 232, 83, 0.1),
@@ -166,7 +165,8 @@ pre {
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 10px;
   font-size: 16px;
-  color: #b5e853;
+  color: #990099;
+  // color: #b5e853;
   border-radius: 2px;
   word-wrap: normal;
   overflow: auto;
@@ -189,7 +189,8 @@ table {
 
 th {
   text-align: left;
-  border-bottom: 1px dashed #b5e853;
+  border-bottom: 1px dashed #990099;
+  // border-bottom: 1px dashed #b5e853;
   padding: 5px 10px;
 }
 
@@ -200,8 +201,10 @@ td {
 hr {
   height: 0;
   border: 0;
-  border-bottom: 1px dashed #b5e853;
-  color: #b5e853;
+  border-bottom: 1px dashed #990099;
+  // border-bottom: 1px dashed #b5e853;
+  color: #990099;
+  // color: #b5e853;
 }
 
 /* Buttons
