@@ -52,8 +52,8 @@ li {
 */
 
 header {
-  // background: rgba(0, 0, 0, 0.1);
   background: url(https://c4.wallpaperflare.com/wallpaper/843/404/899/night-long-exposure-street-street-light-wallpaper-preview.jpg);
+  // background: rgba(0, 0, 0, 0.1);
   width: 100%;
   border-bottom: 1px dashed $conifer; //header;
   padding: 20px 0;
@@ -109,7 +109,8 @@ section img {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: $header;
+  color: #990099;
+  // color: $header;
   letter-spacing: -0.03em;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
   0 0 5px rgba(181, 232, 83, 0.1),
